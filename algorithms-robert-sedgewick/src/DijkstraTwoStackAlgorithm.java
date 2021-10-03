@@ -2,6 +2,7 @@ import edu.princeton.cs.algs4.StdIn;
 
 import java.util.Stack;
 
+// ( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )
 public class DijkstraTwoStackAlgorithm {
     public static void main(String[] args) {
         Stack<String> operators = new Stack<String>();
