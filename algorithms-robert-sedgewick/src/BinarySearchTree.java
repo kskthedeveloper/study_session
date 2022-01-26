@@ -11,7 +11,8 @@ public class BinarySearchTree {
         tree.insert(8);
         tree.insert(9);
         tree.insert(10);
-        System.out.println(tree);
+
+        System.out.println(tree.find(14));
     }
 }
 
@@ -60,5 +61,17 @@ class Tree {
                 current = current.rightChild;
             }
         }
+    }
+
+    public boolean find(int value) {
+        var current = root;
+        while(current != null) {
+            if(value < current.value) {
+                current = current.leftChild;
+            } else if(value > current.value) {
+                current = current.rightChild;
+            } else return true;
+        }
+        return false;
     }
 }
